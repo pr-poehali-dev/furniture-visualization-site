@@ -676,9 +676,14 @@ export default function Index() {
           <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "16px", letterSpacing: "0.1em", color: "var(--gold)", fontWeight: 300 }}>
             Юлия Белова
           </div>
-          <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.55)", fontSize: "12px" }}>
-            © 2025 Юлия Александровна Белова. 3D-визуализатор мебели и интерьеров.
-          </p>
+          <div style={{ textAlign: "center" }}>
+            <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.55)", fontSize: "12px", marginBottom: "4px" }}>
+              © 2025 Юлия Александровна Белова. 3D-визуализатор мебели и интерьеров.
+            </p>
+            <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.35)", fontSize: "11px", letterSpacing: "0.03em" }}>
+              Все изображения на сайте защищены авторским правом. Копирование без разрешения запрещено.
+            </p>
+          </div>
           <div style={{ display: "flex", gap: "24px" }}>
             {["ВКонтакте", "Instagram", "Telegram"].map((s) => (
               <a
