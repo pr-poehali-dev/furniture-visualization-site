@@ -50,17 +50,17 @@ const PROJECTS = [
 ];
 
 const SERVICES = [
-  { icon: "Ruler", title: "Замер и проектирование", desc: "Выезд специалиста, 3D-визуализация в фотореалистичном качестве" },
-  { icon: "Layers", title: "Изготовление", desc: "Собственное производство, срок 4–6 недель с момента согласования" },
-  { icon: "Truck", title: "Доставка и монтаж", desc: "Профессиональная сборка с гарантией 5 лет" },
-  { icon: "Wrench", title: "Гарантийное обслуживание", desc: "Бесплатное обслуживание в течение гарантийного срока" },
+  { icon: "Monitor", title: "3D-визуализация", desc: "Фотореалистичные рендеры интерьеров для презентации клиентам и производству" },
+  { icon: "Layers", title: "Проектная документация", desc: "Чертежи, развёртки, спецификации — всё необходимое для запуска в производство" },
+  { icon: "Palette", title: "Подбор материалов", desc: "Визуализация в разных отделках, фактурах и цветовых решениях" },
+  { icon: "Clock", title: "Быстрые сроки", desc: "Первый вариант визуализации за 3–5 рабочих дней после согласования ТЗ" },
 ];
 
 const STATS = [
   { value: "340+", label: "Реализованных проектов" },
-  { value: "8 лет", label: "На рынке мебели" },
+  { value: "8 лет", label: "Опыт в визуализации" },
   { value: "99%", label: "Довольных клиентов" },
-  { value: "5 лет", label: "Гарантия на изделия" },
+  { value: "3–5 дн", label: "Срок выполнения" },
 ];
 
 function useIntersection(threshold = 0.15) {
@@ -190,7 +190,7 @@ export default function Index() {
         </nav>
 
         <button className="btn-gold hidden md:flex" style={{ padding: "10px 24px", fontSize: "11px" }}>
-          <span>Рассчитать стоимость</span>
+          <span>Обсудить проект</span>
         </button>
 
         <button
@@ -219,7 +219,7 @@ export default function Index() {
             </a>
           ))}
           <button className="btn-gold" style={{ marginTop: "16px" }}>
-            <span>Рассчитать стоимость</span>
+            <span>Обсудить проект</span>
           </button>
         </div>
       )}
@@ -251,7 +251,7 @@ export default function Index() {
           <div
             style={{ fontFamily: "'Golos Text', sans-serif", color: "var(--gold)", fontSize: "12px", letterSpacing: "0.3em", textTransform: "uppercase", marginBottom: "20px", opacity: 0, animation: "fadeUp 0.8s 0.2s forwards" }}
           >
-            Дизайнерская мебель на заказ
+            Визуализация мебели и интерьеров
           </div>
           <h1
             style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(42px, 7vw, 96px)", fontWeight: 300, lineHeight: 1.0, marginBottom: "28px", opacity: 0, animation: "fadeUp 0.9s 0.4s forwards" }}
@@ -262,7 +262,7 @@ export default function Index() {
           <p
             style={{ fontFamily: "'Golos Text', sans-serif", fontSize: "16px", color: "rgba(240,234,224,0.7)", maxWidth: "480px", lineHeight: 1.7, marginBottom: "40px", opacity: 0, animation: "fadeUp 0.9s 0.6s forwards" }}
           >
-            Изготавливаем мебель премиум-класса с индивидуальным подходом к каждому проекту. Кухни, гардеробные, гостиные.
+            Создаём фотореалистичные 3D-визуализации для мебельных компаний и дизайнеров интерьеров. Быстро, точно, под производство.
           </p>
           <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", opacity: 0, animation: "fadeUp 0.9s 0.8s forwards" }}>
             <a href="#portfolio" style={{ textDecoration: "none" }}>
@@ -410,14 +410,14 @@ export default function Index() {
                 О компании
               </div>
               <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(32px, 4vw, 54px)", fontWeight: 300, lineHeight: 1.15, marginBottom: "28px" }}>
-                Мы создаём мебель,<br />
-                <em style={{ fontStyle: "italic", color: "var(--gold-light)" }}>которая живёт вечно</em>
+                Мы делаем визуализации,<br />
+                <em style={{ fontStyle: "italic", color: "var(--gold-light)" }}>которые продают</em>
               </h2>
               <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.65)", lineHeight: 1.8, fontSize: "15px", marginBottom: "20px" }}>
-                Студия FORMA специализируется на создании индивидуальной мебели премиум-класса. Мы работаем с лучшими материалами — натуральными шпонами, лакобелем, каменными столешницами — и используем фурнитуру ведущих европейских производителей.
+                Студия FORMA создаёт фотореалистичную 3D-визуализацию мебели и интерьеров. Работаем напрямую с мебельными производствами и дизайнерами — делаем рендеры для каталогов, сайтов и презентаций клиентам.
               </p>
               <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.65)", lineHeight: 1.8, fontSize: "15px", marginBottom: "40px" }}>
-                Каждый проект начинается с детального изучения пространства и пожеланий клиента. Наши дизайнеры создают 3D-визуализации, которые позволяют увидеть результат ещё до начала производства.
+                Понимаем специфику производства: учитываем материалы, фурнитуру, габариты. Результат — точная визуализация, которую можно сразу передавать в работу.
               </p>
               <a href="#contact" style={{ textDecoration: "none" }}>
                 <button className="btn-gold" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
@@ -520,11 +520,11 @@ export default function Index() {
             <em style={{ fontStyle: "italic", color: "var(--gold-light)" }}>с одного звонка</em>
           </h2>
           <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.65)", maxWidth: "520px", margin: "0 auto 48px", lineHeight: 1.8 }}>
-            Оставьте заявку и мы свяжемся с вами в течение 30 минут для обсуждения проекта. Замер — бесплатно.
+            Оставьте заявку и мы свяжемся с вами в течение 30 минут для обсуждения проекта. Первый рендер — бесплатно.
           </p>
           <a href="#contact" style={{ textDecoration: "none" }}>
             <button className="btn-gold-fill" style={{ padding: "18px 52px", fontSize: "13px" }}>
-              Получить бесплатный замер
+            Получить бесплатный рендер
             </button>
           </a>
         </AnimSection>
