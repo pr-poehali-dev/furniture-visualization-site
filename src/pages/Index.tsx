@@ -417,9 +417,15 @@ export default function Index() {
               <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.65)", lineHeight: 1.8, fontSize: "15px", marginBottom: "20px" }}>
                 Меня зовут Юлия Александровна Белова — я дизайнер-визуализатор с опытом в мебельной сфере. Работаю удалённо напрямую с мебельными производствами и дизайнерами интерьеров.
               </p>
-              <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.65)", lineHeight: 1.8, fontSize: "15px", marginBottom: "40px" }}>
+              <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.65)", lineHeight: 1.8, fontSize: "15px", marginBottom: "28px" }}>
                 Понимаю специфику производства: учитываю материалы, фурнитуру, габариты. Результат — точная визуализация, которую можно сразу передавать в работу или показывать клиентам.
               </p>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: "12px", padding: "12px 20px", border: "1px solid rgba(201,169,110,0.3)", marginBottom: "32px" }}>
+                <Icon name="Box" size={16} style={{ color: "var(--gold)" }} />
+                <span style={{ fontFamily: "'Golos Text', sans-serif", fontSize: "13px", color: "rgba(240,234,224,0.6)", letterSpacing: "0.05em" }}>
+                  Программа визуализации: <span style={{ color: "var(--gold)", fontWeight: 500 }}>Pro 100</span>
+                </span>
+              </div>
               <a href="#contact" style={{ textDecoration: "none" }}>
                 <button className="btn-gold" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
                   <span>Написать мне</span>
