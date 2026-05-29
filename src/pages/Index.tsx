@@ -467,7 +467,7 @@ export default function Index() {
           <AnimSection>
             <div style={{ marginBottom: "60px" }}>
               <div style={{ fontFamily: "'Golos Text', sans-serif", color: "var(--gold)", fontSize: "12px", letterSpacing: "0.3em", textTransform: "uppercase", marginBottom: "12px" }}>
-                Что мы делаем
+                Что я делаю
               </div>
               <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(32px, 5vw, 60px)", fontWeight: 300 }}>
                 Полный цикл работ
