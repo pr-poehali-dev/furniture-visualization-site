@@ -98,11 +98,37 @@ function AnimSection({ children, className = "", delay = 0 }: { children: React.
   );
 }
 
+const SEND_EMAIL_URL = "https://functions.poehali.dev/31c03de8-764a-40c5-bd27-ac5881cf94c1";
+
 export default function Index() {
   const [activeProject, setActiveProject] = useState<(typeof PROJECTS)[0] | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeFilter, setActiveFilter] = useState("Все");
+
+  const [formData, setFormData] = useState({ name: "", phone: "", email: "", message: "" });
+  const [formStatus, setFormStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.phone) return;
+    setFormStatus("sending");
+    try {
+      const res = await fetch(SEND_EMAIL_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setFormStatus("success");
+        setFormData({ name: "", phone: "", email: "", message: "" });
+      } else {
+        setFormStatus("error");
+      }
+    } catch {
+      setFormStatus("error");
+    }
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -519,41 +545,87 @@ export default function Index() {
           </AnimSection>
 
           <AnimSection delay={200}>
-            <form style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-              <input
-                type="text"
-                placeholder="Ваше имя"
-                style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(201,169,110,0.2)", padding: "16px 20px", color: "var(--cream)", fontSize: "14px", outline: "none", fontFamily: "'Golos Text', sans-serif", transition: "border-color 0.2s" }}
-                onFocus={e => (e.currentTarget.style.borderColor = "var(--gold)")}
-                onBlur={e => (e.currentTarget.style.borderColor = "rgba(201,169,110,0.2)")}
-              />
-              <input
-                type="tel"
-                placeholder="Телефон"
-                style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(201,169,110,0.2)", padding: "16px 20px", color: "var(--cream)", fontSize: "14px", outline: "none", fontFamily: "'Golos Text', sans-serif", transition: "border-color 0.2s" }}
-                onFocus={e => (e.currentTarget.style.borderColor = "var(--gold)")}
-                onBlur={e => (e.currentTarget.style.borderColor = "rgba(201,169,110,0.2)")}
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                style={{ gridColumn: "1 / -1", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(201,169,110,0.2)", padding: "16px 20px", color: "var(--cream)", fontSize: "14px", outline: "none", fontFamily: "'Golos Text', sans-serif", transition: "border-color 0.2s" }}
-                onFocus={e => (e.currentTarget.style.borderColor = "var(--gold)")}
-                onBlur={e => (e.currentTarget.style.borderColor = "rgba(201,169,110,0.2)")}
-              />
-              <textarea
-                placeholder="Расскажите о проекте (площадь, пожелания, стиль)"
-                rows={5}
-                style={{ gridColumn: "1 / -1", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(201,169,110,0.2)", padding: "16px 20px", color: "var(--cream)", fontSize: "14px", outline: "none", resize: "none", fontFamily: "'Golos Text', sans-serif", transition: "border-color 0.2s" }}
-                onFocus={e => (e.currentTarget.style.borderColor = "var(--gold)")}
-                onBlur={e => (e.currentTarget.style.borderColor = "rgba(201,169,110,0.2)")}
-              />
-              <div style={{ gridColumn: "1 / -1", display: "flex", justifyContent: "center", marginTop: "8px" }}>
-                <button className="btn-gold-fill" style={{ padding: "16px 60px" }}>
-                  Отправить заявку
+            {formStatus === "success" ? (
+              <div style={{
+                textAlign: "center", padding: "60px 40px",
+                border: "1px solid rgba(201,169,110,0.3)",
+                background: "rgba(201,169,110,0.05)",
+                animation: "fadeUp 0.6s ease forwards",
+              }}>
+                <div style={{ color: "var(--gold)", marginBottom: "16px" }}>
+                  <Icon name="CheckCircle" size={40} />
+                </div>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "28px", fontWeight: 300, marginBottom: "12px" }}>
+                  Заявка отправлена!
+                </h3>
+                <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.6)", fontSize: "15px", lineHeight: 1.7 }}>
+                  Мы свяжемся с вами в течение 30 минут.
+                </p>
+                <button
+                  onClick={() => setFormStatus("idle")}
+                  className="btn-gold"
+                  style={{ marginTop: "28px" }}
+                >
+                  <span>Отправить ещё одну заявку</span>
                 </button>
               </div>
-            </form>
+            ) : (
+              <form onSubmit={handleSubmit} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+                <input
+                  type="text"
+                  placeholder="Ваше имя *"
+                  value={formData.name}
+                  onChange={e => setFormData(p => ({ ...p, name: e.target.value }))}
+                  required
+                  style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(201,169,110,0.2)", padding: "16px 20px", color: "var(--cream)", fontSize: "14px", outline: "none", fontFamily: "'Golos Text', sans-serif", transition: "border-color 0.2s" }}
+                  onFocus={e => (e.currentTarget.style.borderColor = "var(--gold)")}
+                  onBlur={e => (e.currentTarget.style.borderColor = "rgba(201,169,110,0.2)")}
+                />
+                <input
+                  type="tel"
+                  placeholder="Телефон *"
+                  value={formData.phone}
+                  onChange={e => setFormData(p => ({ ...p, phone: e.target.value }))}
+                  required
+                  style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(201,169,110,0.2)", padding: "16px 20px", color: "var(--cream)", fontSize: "14px", outline: "none", fontFamily: "'Golos Text', sans-serif", transition: "border-color 0.2s" }}
+                  onFocus={e => (e.currentTarget.style.borderColor = "var(--gold)")}
+                  onBlur={e => (e.currentTarget.style.borderColor = "rgba(201,169,110,0.2)")}
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={e => setFormData(p => ({ ...p, email: e.target.value }))}
+                  style={{ gridColumn: "1 / -1", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(201,169,110,0.2)", padding: "16px 20px", color: "var(--cream)", fontSize: "14px", outline: "none", fontFamily: "'Golos Text', sans-serif", transition: "border-color 0.2s" }}
+                  onFocus={e => (e.currentTarget.style.borderColor = "var(--gold)")}
+                  onBlur={e => (e.currentTarget.style.borderColor = "rgba(201,169,110,0.2)")}
+                />
+                <textarea
+                  placeholder="Расскажите о проекте (площадь, пожелания, стиль)"
+                  rows={5}
+                  value={formData.message}
+                  onChange={e => setFormData(p => ({ ...p, message: e.target.value }))}
+                  style={{ gridColumn: "1 / -1", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(201,169,110,0.2)", padding: "16px 20px", color: "var(--cream)", fontSize: "14px", outline: "none", resize: "none", fontFamily: "'Golos Text', sans-serif", transition: "border-color 0.2s" }}
+                  onFocus={e => (e.currentTarget.style.borderColor = "var(--gold)")}
+                  onBlur={e => (e.currentTarget.style.borderColor = "rgba(201,169,110,0.2)")}
+                />
+                {formStatus === "error" && (
+                  <div style={{ gridColumn: "1 / -1", color: "#e05555", fontFamily: "'Golos Text', sans-serif", fontSize: "13px", textAlign: "center" }}>
+                    Не удалось отправить. Проверьте подключение и попробуйте снова.
+                  </div>
+                )}
+                <div style={{ gridColumn: "1 / -1", display: "flex", justifyContent: "center", marginTop: "8px" }}>
+                  <button
+                    type="submit"
+                    className="btn-gold-fill"
+                    style={{ padding: "16px 60px", opacity: formStatus === "sending" ? 0.7 : 1, cursor: formStatus === "sending" ? "not-allowed" : "pointer" }}
+                    disabled={formStatus === "sending"}
+                  >
+                    {formStatus === "sending" ? "Отправляем..." : "Отправить заявку"}
+                  </button>
+                </div>
+              </form>
+            )}
           </AnimSection>
 
           <AnimSection delay={300}>
