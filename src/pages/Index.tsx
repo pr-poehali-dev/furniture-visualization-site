@@ -428,6 +428,12 @@ export default function Index() {
                   </span>
                 </div>
                 <div style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "12px 20px", border: "1px solid rgba(201,169,110,0.3)" }}>
+                  <Icon name="Cuboid" size={15} />
+                  <span style={{ fontFamily: "'Golos Text', sans-serif", fontSize: "13px", color: "rgba(240,234,224,0.85)" }}>
+                    Программа: <span style={{ color: "var(--gold)", fontWeight: 500 }}>3ds Max</span>
+                  </span>
+                </div>
+                <div style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "12px 20px", border: "1px solid rgba(201,169,110,0.3)" }}>
                   <Icon name="Image" size={15} />
                   <span style={{ fontFamily: "'Golos Text', sans-serif", fontSize: "13px", color: "rgba(240,234,224,0.85)" }}>
                     Формат файлов: <span style={{ color: "var(--gold)", fontWeight: 500 }}>JPG</span>
