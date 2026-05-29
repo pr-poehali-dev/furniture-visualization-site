@@ -263,7 +263,7 @@ export default function Index() {
           <p
             style={{ fontFamily: "'Golos Text', sans-serif", fontSize: "16px", color: "rgba(240,234,224,0.7)", maxWidth: "480px", lineHeight: 1.7, marginBottom: "40px", opacity: 0, animation: "fadeUp 0.9s 0.6s forwards" }}
           >
-            Создаём фотореалистичные 3D-визуализации для мебельных компаний и дизайнеров интерьеров. Быстро, точно, под производство.
+            Делаю фотореалистичные 3D-визуализации для мебельных компаний и дизайнеров интерьеров. Быстро, точно, под производство.
           </p>
           <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", opacity: 0, animation: "fadeUp 0.9s 0.8s forwards" }}>
             <a href="#portfolio" style={{ textDecoration: "none" }}>
@@ -422,7 +422,7 @@ export default function Index() {
               </p>
               <a href="#contact" style={{ textDecoration: "none" }}>
                 <button className="btn-gold" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
-                  <span>Познакомиться</span>
+                  <span>Написать мне</span>
                   <Icon name="ArrowRight" size={14} />
                 </button>
               </a>
@@ -521,7 +521,7 @@ export default function Index() {
             <em style={{ fontStyle: "italic", color: "var(--gold-light)" }}>с одного звонка</em>
           </h2>
           <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.65)", maxWidth: "520px", margin: "0 auto 48px", lineHeight: 1.8 }}>
-            Оставьте заявку и мы свяжемся с вами в течение 30 минут для обсуждения проекта. Первый рендер — бесплатно.
+            Оставьте заявку и я свяжусь с вами в течение 30 минут для обсуждения проекта. Первый рендер — бесплатно.
           </p>
           <a href="#contact" style={{ textDecoration: "none" }}>
             <button className="btn-gold-fill" style={{ padding: "18px 52px", fontSize: "13px" }}>
@@ -537,7 +537,7 @@ export default function Index() {
           <AnimSection>
             <div style={{ textAlign: "center", marginBottom: "60px" }}>
               <div style={{ fontFamily: "'Golos Text', sans-serif", color: "var(--gold)", fontSize: "12px", letterSpacing: "0.3em", textTransform: "uppercase", marginBottom: "12px" }}>
-                Свяжитесь с нами
+                Напишите мне
               </div>
               <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(32px, 5vw, 60px)", fontWeight: 300 }}>
                 Обсудим ваш проект
