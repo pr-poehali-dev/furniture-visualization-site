@@ -415,7 +415,7 @@ export default function Index() {
                 <em style={{ fontStyle: "italic", color: "var(--gold-light)" }}>которые продают</em>
               </h2>
               <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.88)", lineHeight: 1.8, fontSize: "15px", marginBottom: "20px" }}>
-                Меня зовут Юлия Александровна Белова — я дизайнер-визуализатор с опытом в мебельной сфере. Работаю удалённо напрямую с мебельными производствами и дизайнерами интерьеров.
+                Меня зовут Юлия Белова — я дизайнер-визуализатор с опытом в мебельной сфере. Работаю удалённо напрямую с мебельными производствами и дизайнерами интерьеров.
               </p>
               <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.88)", lineHeight: 1.8, fontSize: "15px", marginBottom: "28px" }}>
                 Понимаю специфику производства: учитываю материалы, фурнитуру, габариты. Результат — точная визуализация, которую можно сразу передавать в работу или показывать клиентам.
@@ -678,7 +678,7 @@ export default function Index() {
           </div>
           <div style={{ textAlign: "center" }}>
             <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.55)", fontSize: "12px", marginBottom: "4px" }}>
-              © 2025 Юлия Александровна Белова. 3D-визуализатор мебели и интерьеров.
+              © 2025 Юлия Белова. 3D-визуализатор мебели и интерьеров.
             </p>
             <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.35)", fontSize: "11px", letterSpacing: "0.03em" }}>
               Все изображения на сайте защищены авторским правом. Копирование без разрешения запрещено.
