@@ -174,7 +174,7 @@ export default function Index() {
               key={href}
               href={href}
               style={{
-                color: "rgba(240,234,224,0.7)",
+                color: "rgba(240,234,224,0.9)",
                 textDecoration: "none",
                 fontSize: "12px",
                 letterSpacing: "0.12em",
@@ -183,7 +183,7 @@ export default function Index() {
                 transition: "color 0.2s",
               }}
               onMouseEnter={e => (e.currentTarget.style.color = "var(--gold)")}
-              onMouseLeave={e => (e.currentTarget.style.color = "rgba(240,234,224,0.7)")}
+              onMouseLeave={e => (e.currentTarget.style.color = "rgba(240,234,224,0.9)")}
             >
               {label}
             </a>
@@ -261,7 +261,7 @@ export default function Index() {
             <em style={{ fontStyle: "italic", color: "var(--gold-light)" }}>созданное для вас</em>
           </h1>
           <p
-            style={{ fontFamily: "'Golos Text', sans-serif", fontSize: "16px", color: "rgba(240,234,224,0.7)", maxWidth: "480px", lineHeight: 1.7, marginBottom: "40px", opacity: 0, animation: "fadeUp 0.9s 0.6s forwards" }}
+            style={{ fontFamily: "'Golos Text', sans-serif", fontSize: "16px", color: "rgba(240,234,224,0.9)", maxWidth: "480px", lineHeight: 1.7, marginBottom: "40px", opacity: 0, animation: "fadeUp 0.9s 0.6s forwards" }}
           >
             Делаю фотореалистичные 3D-визуализации для мебельных компаний и дизайнеров интерьеров. Быстро, точно, под производство.
           </p>
@@ -308,7 +308,7 @@ export default function Index() {
                 <div className="text-shimmer" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "52px", fontWeight: 300, marginBottom: "8px" }}>
                   {s.value}
                 </div>
-                <div style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.55)", fontSize: "13px", letterSpacing: "0.05em" }}>
+                <div style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.82)", fontSize: "13px", letterSpacing: "0.05em" }}>
                   {s.label}
                 </div>
               </div>
@@ -414,22 +414,22 @@ export default function Index() {
                 Визуализации,<br />
                 <em style={{ fontStyle: "italic", color: "var(--gold-light)" }}>которые продают</em>
               </h2>
-              <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.65)", lineHeight: 1.8, fontSize: "15px", marginBottom: "20px" }}>
+              <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.88)", lineHeight: 1.8, fontSize: "15px", marginBottom: "20px" }}>
                 Меня зовут Юлия Александровна Белова — я дизайнер-визуализатор с опытом в мебельной сфере. Работаю удалённо напрямую с мебельными производствами и дизайнерами интерьеров.
               </p>
-              <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.65)", lineHeight: 1.8, fontSize: "15px", marginBottom: "28px" }}>
+              <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.88)", lineHeight: 1.8, fontSize: "15px", marginBottom: "28px" }}>
                 Понимаю специфику производства: учитываю материалы, фурнитуру, габариты. Результат — точная визуализация, которую можно сразу передавать в работу или показывать клиентам.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", marginBottom: "32px" }}>
                 <div style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "12px 20px", border: "1px solid rgba(201,169,110,0.3)" }}>
                   <Icon name="Box" size={15} />
-                  <span style={{ fontFamily: "'Golos Text', sans-serif", fontSize: "13px", color: "rgba(240,234,224,0.6)" }}>
+                  <span style={{ fontFamily: "'Golos Text', sans-serif", fontSize: "13px", color: "rgba(240,234,224,0.85)" }}>
                     Программа: <span style={{ color: "var(--gold)", fontWeight: 500 }}>Pro 100</span>
                   </span>
                 </div>
                 <div style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "12px 20px", border: "1px solid rgba(201,169,110,0.3)" }}>
                   <Icon name="Image" size={15} />
-                  <span style={{ fontFamily: "'Golos Text', sans-serif", fontSize: "13px", color: "rgba(240,234,224,0.6)" }}>
+                  <span style={{ fontFamily: "'Golos Text', sans-serif", fontSize: "13px", color: "rgba(240,234,224,0.85)" }}>
                     Формат файлов: <span style={{ color: "var(--gold)", fontWeight: 500 }}>JPG</span>
                   </span>
                 </div>
@@ -508,7 +508,7 @@ export default function Index() {
                   <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "22px", fontWeight: 400, marginBottom: "12px", color: "var(--cream)" }}>
                     {s.title}
                   </h3>
-                  <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.55)", lineHeight: 1.7, fontSize: "14px" }}>
+                  <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.82)", lineHeight: 1.7, fontSize: "14px" }}>
                     {s.desc}
                   </p>
                 </div>
@@ -534,7 +534,7 @@ export default function Index() {
             Ваш проект начинается<br />
             <em style={{ fontStyle: "italic", color: "var(--gold-light)" }}>с одного звонка</em>
           </h2>
-          <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.65)", maxWidth: "520px", margin: "0 auto 48px", lineHeight: 1.8 }}>
+          <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.88)", maxWidth: "520px", margin: "0 auto 48px", lineHeight: 1.8 }}>
             Оставьте заявку и я свяжусь с вами в течение 30 минут для обсуждения проекта. Первый рендер — бесплатно.
           </p>
           <a href="#contact" style={{ textDecoration: "none" }}>
@@ -573,7 +573,7 @@ export default function Index() {
                 <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "28px", fontWeight: 300, marginBottom: "12px" }}>
                   Заявка отправлена!
                 </h3>
-                <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.6)", fontSize: "15px", lineHeight: 1.7 }}>
+                <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.85)", fontSize: "15px", lineHeight: 1.7 }}>
                   Я свяжусь с вами в течение 30 минут.
                 </p>
                 <button
@@ -654,7 +654,7 @@ export default function Index() {
                   <div style={{ color: "var(--gold)" }}>
                     <Icon name={c.icon} size={18} />
                   </div>
-                  <span style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.65)", fontSize: "14px" }}>
+                  <span style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.88)", fontSize: "14px" }}>
                     {c.label}
                   </span>
                 </div>
@@ -670,16 +670,16 @@ export default function Index() {
           <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "16px", letterSpacing: "0.1em", color: "var(--gold)", fontWeight: 300 }}>
             Юлия Белова
           </div>
-          <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.35)", fontSize: "12px" }}>
+          <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.55)", fontSize: "12px" }}>
             © 2025 Юлия Александровна Белова. 3D-визуализатор мебели и интерьеров.
           </p>
           <div style={{ display: "flex", gap: "24px" }}>
             {["ВКонтакте", "Instagram", "Telegram"].map((s) => (
               <a
                 key={s} href="#"
-                style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.4)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.05em", transition: "color 0.2s" }}
+                style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.6)", fontSize: "12px", textDecoration: "none", letterSpacing: "0.05em", transition: "color 0.2s" }}
                 onMouseEnter={e => (e.currentTarget.style.color = "var(--gold)")}
-                onMouseLeave={e => (e.currentTarget.style.color = "rgba(240,234,224,0.4)")}
+                onMouseLeave={e => (e.currentTarget.style.color = "rgba(240,234,224,0.6)")}
               >
                 {s}
               </a>
@@ -722,7 +722,7 @@ export default function Index() {
                   {activeProject.title}
                 </h3>
                 <div className="gold-line" style={{ marginBottom: "24px" }} />
-                <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.65)", lineHeight: 1.8, fontSize: "14px", marginBottom: "24px" }}>
+                <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.88)", lineHeight: 1.8, fontSize: "14px", marginBottom: "24px" }}>
                   {activeProject.description}
                 </p>
                 {activeProject.area !== "—" && (
