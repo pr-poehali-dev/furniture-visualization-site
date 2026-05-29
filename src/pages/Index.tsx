@@ -162,8 +162,9 @@ export default function Index() {
         }}
       >
         <a href="#hero" style={{ textDecoration: "none" }}>
-          <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "22px", letterSpacing: "0.3em", color: "var(--gold)", fontWeight: 300 }}>
-            FORMA
+          <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "18px", letterSpacing: "0.15em", color: "var(--gold)", fontWeight: 300, lineHeight: 1.2 }}>
+            Юлия Белова<br />
+            <span style={{ fontSize: "11px", letterSpacing: "0.25em", opacity: 0.7, textTransform: "uppercase" }}>3D-визуализатор</span>
           </div>
         </a>
 
@@ -292,7 +293,7 @@ export default function Index() {
         <div className="animate-marquee" style={{ display: "flex", whiteSpace: "nowrap" }}>
           {Array(8).fill(null).map((_, i) => (
             <span key={i} style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--dark)", fontSize: "14px", letterSpacing: "0.3em", textTransform: "uppercase", padding: "0 40px" }}>
-              Мебель на заказ &nbsp;·&nbsp; Кухни &nbsp;·&nbsp; Гардеробные &nbsp;·&nbsp; Гостиные &nbsp;·&nbsp; Изготовление 4–6 недель &nbsp;
+              3D-визуализация &nbsp;·&nbsp; Мебель &nbsp;·&nbsp; Интерьеры &nbsp;·&nbsp; Для мебельщиков и дизайнеров &nbsp;·&nbsp; Удалённая работа &nbsp;
             </span>
           ))}
         </div>
@@ -407,17 +408,17 @@ export default function Index() {
           <AnimSection>
             <div>
               <div style={{ fontFamily: "'Golos Text', sans-serif", color: "var(--gold)", fontSize: "12px", letterSpacing: "0.3em", textTransform: "uppercase", marginBottom: "16px" }}>
-                О компании
+                Обо мне
               </div>
               <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(32px, 4vw, 54px)", fontWeight: 300, lineHeight: 1.15, marginBottom: "28px" }}>
-                Мы делаем визуализации,<br />
+                Визуализации,<br />
                 <em style={{ fontStyle: "italic", color: "var(--gold-light)" }}>которые продают</em>
               </h2>
               <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.65)", lineHeight: 1.8, fontSize: "15px", marginBottom: "20px" }}>
-                Студия FORMA создаёт фотореалистичную 3D-визуализацию мебели и интерьеров. Работаем напрямую с мебельными производствами и дизайнерами — делаем рендеры для каталогов, сайтов и презентаций клиентам.
+                Меня зовут Юлия Александровна Белова — я дизайнер-визуализатор с опытом в мебельной сфере. Работаю удалённо напрямую с мебельными производствами и дизайнерами интерьеров.
               </p>
               <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.65)", lineHeight: 1.8, fontSize: "15px", marginBottom: "40px" }}>
-                Понимаем специфику производства: учитываем материалы, фурнитуру, габариты. Результат — точная визуализация, которую можно сразу передавать в работу.
+                Понимаю специфику производства: учитываю материалы, фурнитуру, габариты. Результат — точная визуализация, которую можно сразу передавать в работу или показывать клиентам.
               </p>
               <a href="#contact" style={{ textDecoration: "none" }}>
                 <button className="btn-gold" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
@@ -559,7 +560,7 @@ export default function Index() {
                   Заявка отправлена!
                 </h3>
                 <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.6)", fontSize: "15px", lineHeight: 1.7 }}>
-                  Мы свяжемся с вами в течение 30 минут.
+                  Я свяжусь с вами в течение 30 минут.
                 </p>
                 <button
                   onClick={() => setFormStatus("idle")}
@@ -631,9 +632,9 @@ export default function Index() {
           <AnimSection delay={300}>
             <div style={{ display: "flex", justifyContent: "center", gap: "60px", marginTop: "60px", flexWrap: "wrap" }}>
               {[
-                { icon: "Phone", label: "+7 (999) 000-00-00" },
-                { icon: "Mail", label: "hello@forma-furniture.ru" },
-                { icon: "MapPin", label: "Москва, ул. Дизайнерская, 1" },
+                { icon: "Phone", label: "+7 (992) 421-33-61" },
+                { icon: "Mail", label: "juliebel@bk.ru" },
+                { icon: "Globe", label: "Работаю удалённо по всей России" },
               ].map((c, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                   <div style={{ color: "var(--gold)" }}>
@@ -652,11 +653,11 @@ export default function Index() {
       {/* FOOTER */}
       <footer style={{ padding: "40px", borderTop: "1px solid rgba(201,169,110,0.1)", background: "var(--dark)" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "16px" }}>
-          <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "20px", letterSpacing: "0.3em", color: "var(--gold)", fontWeight: 300 }}>
-            FORMA
+          <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "16px", letterSpacing: "0.1em", color: "var(--gold)", fontWeight: 300 }}>
+            Юлия Белова
           </div>
           <p style={{ fontFamily: "'Golos Text', sans-serif", color: "rgba(240,234,224,0.35)", fontSize: "12px" }}>
-            © 2024 FORMA. Дизайнерская мебель на заказ.
+            © 2025 Юлия Александровна Белова. 3D-визуализатор мебели и интерьеров.
           </p>
           <div style={{ display: "flex", gap: "24px" }}>
             {["ВКонтакте", "Instagram", "Telegram"].map((s) => (
